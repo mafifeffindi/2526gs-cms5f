@@ -3,3 +3,6 @@ Tahapan kegiatan belajar:
 1. Mahasiswa membuka GenAI dengan prompt untuk membuat WordPress Theme dari awal.
 2. Mahasiswa mengeksekusi code yang dihasilkan oleh GenAI ke dalam web server yang dimiliki pada laptop masing-masing. 
 3. Mahasiswa mengunggah WordPress Theme yang sudah disusun ke dalam Repository kelas. 
+
+
+Rujukan untuk membuat WordPress Theme: https://www.petanikode.com/wordpress-template/ 
