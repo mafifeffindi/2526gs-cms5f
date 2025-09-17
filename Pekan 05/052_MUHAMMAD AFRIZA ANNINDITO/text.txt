@@ -1,0 +1,53 @@
+<?php get_header(); ?>
+
+<main>
+    <?php
+    if ( have_posts() ) :
+        while ( have_posts() ) : the_post(); ?>
+            <article>
+                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <div><?php the_content(); ?></div>
+            </article>
+        <?php endwhile;
+    else :
+        echo '<p>Tidak ada postingan.</p>';
+    endif;
+    ?>
+</main>
+
+<?php get_footer(); ?>
+/*
+Theme Name: nyam nyam
+Theme URI: http://example.com/mytheme
+Author: dito
+Author URI: http://example.com
+Description: Tema WordPress sederhana buatan sendiri
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mytheme
+Tags: custom, blog, simple
+*/
+
+/* CSS dasar */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background: #0066cc;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+}
