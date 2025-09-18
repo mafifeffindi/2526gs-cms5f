@@ -1,0 +1,30 @@
+/*
+Theme Name: SAFIRANWTHEMES
+Theme URI: http://example.com/mytheme
+Author: Nama Kamu
+Author URI: http://example.com
+Description: Tema WordPress custom buatan sendiri
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mytheme
+Tags: blog, custom, responsive
+*/
+
+/* Tambahkan style CSS kamu di bawah */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px;
+}
+a {
+    color: #0073aa;
+    text-decoration: none;
+}
+a:hover {
+    color: #005177;
+}
