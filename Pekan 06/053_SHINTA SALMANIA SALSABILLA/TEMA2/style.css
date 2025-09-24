@@ -1,0 +1,103 @@
+/*
+Theme Name: Tema Pastel Kuning
+Theme URI: http://contoh.com
+Author: Shinta
+Description: Tema WordPress kekinian dengan nuansa pastel kuning
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: tema-pastel
+*/
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffbea;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ffef9f;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #ffe066;
+}
+
+header h1 a {
+  color: #333;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #ffe066;
+  color: #000;
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+article {
+  background: #fffdf2;
+  border: 1px solid #ffe066;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+article:hover {
+  transform: translateY(-4px);
+}
+
+article h2 a {
+  color: #444;
+  text-decoration: none;
+}
+
+footer {
+  background: #ffef9f;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.sidebar {
+  background: #fffdf2;
+  border: 1px solid #ffe066;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
