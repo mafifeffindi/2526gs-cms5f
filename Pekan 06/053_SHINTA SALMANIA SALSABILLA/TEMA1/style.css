@@ -1,0 +1,62 @@
+/*
+Theme Name: Modern Theme
+Theme URI: https://example.com/moderntheme
+Author: Shinta Salmania
+Author URI: https://example.com
+Description: Tema WordPress modern, clean, responsif untuk blog & portfolio.
+Version: 1.0
+License: GPL v2 or later
+Text Domain: moderntheme
+*/
+
+:root {
+  --primary: #4f46e5;  /* Indigo */
+  --secondary: #64748b; /* Gray */
+  --light: #f8fafc;
+  --dark: #0f172a;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+header, footer {
+  background: var(--dark);
+  color: #fff;
+  padding: 1.5rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.main-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.post-card {
+  background: #fff;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+.post-card:hover {
+  transform: translateY(-5px);
+}
