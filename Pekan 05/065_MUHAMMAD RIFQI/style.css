@@ -1,0 +1,87 @@
+/*
+Theme Name: R-STORE_TEMA
+Theme URI: https://example.com/
+Author: RIP
+Author URI: https://example.com/
+Description: Theme WordPress sederhana buatan sendiri.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: R-STORE_TEMA
+Tags: blog, simple, responsive
+*/
+
+/* Styling dasar */
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3 {
+    color: #222;
+  }
+  
+  a {
+    color: #0073aa;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #005177;
+  }
+  /* Tambahan layout 2 kolom */
+#content {
+    width: 70%;
+    float: left;
+    padding: 20px;
+    background: #fff;
+  }
+  
+  #sidebar {
+    width: 30%;
+    float: right;
+    padding: 20px;
+    background: #f0f0f0;
+  }
+  /* Artikel */
+article {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .entry-title a {
+    color: #0073aa;
+    text-decoration: none;
+  }
+  
+  .entry-title a:hover {
+    color: #005177;
+  }
+  
+  /* Navigasi */
+  .pagination {
+    margin: 20px 0;
+  }
+  
+  .pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #0073aa;
+  }
+
+/* Footer */
+#site-footer p {
+    margin: 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    #content,
+    #sidebar {
+      width: 100%;
+      float: none;
+    }
+  }  
