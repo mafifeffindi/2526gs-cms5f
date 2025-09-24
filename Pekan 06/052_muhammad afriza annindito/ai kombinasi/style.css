@@ -1,0 +1,31 @@
+/*
+Theme Name: GenAI Theme
+Theme URI: https://contoh.com/genai-theme
+Author: afriza
+Author URI: https://contoh.com
+Description: WordPress theme sederhana hasil bantuan GenAI
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: genai-theme
+*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+header, footer {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+main {
+    background: #fff;
+    padding: 20px;
+    margin-top: 10px;
+}

@@ -1,0 +1,54 @@
+/*
+Theme Name: STURKTUR SENDIRI
+Theme URI: https://example.com
+Author: dito
+Author URI: https://example.com
+Description: Theme sederhana dibuat mengikuti tutorial Dewaweb "Belajar Membuat Template WordPress Sendiri dari Nol"
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: STURKTUR-SENDIRI
+*/
+
+:root{
+  --bg: #f5f5f5;
+  --card: #ffffff;
+  --accent: #1e73be;
+  --text: #222;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--bg)}
+
+.wrap{width:90%;max-width:1100px;margin:30px auto}
+header.site-header{background:var(--accent);color:#fff;padding:24px;border-radius:6px}
+header.site-header h1{margin:0;font-size:1.6rem}
+header.site-header p{margin:6px 0 0;font-size:0.9rem;opacity:0.95}
+
+.site-nav{margin-top:12px}
+.site-nav ul{list-style:none;padding:0;margin:0;display:flex;gap:12px;flex-wrap:wrap}
+.site-nav a{color:#fff;text-decoration:none;padding:6px 10px;border-radius:4px;background:rgba(255,255,255,0.08)}
+
+.main-grid{display:grid;grid-template-columns: 1fr 320px;gap:24px;margin-top:20px}
+
+/* content card */
+.article-loop, .article-full{
+  background:var(--card);
+  padding:18px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.04);
+}
+.article-loop h2{margin-top:0}
+.meta{font-size:0.85rem;color:#666;margin-bottom:8px}
+
+/* sidebar */
+.sidebar{display:block}
+.sidebar .widget{background:var(--card);padding:12px;border-radius:6px;margin-bottom:12px}
+
+/* footer */
+.site-footer{margin-top:28px;text-align:center;padding:12px;color:#555}
+
+/* responsive */
+@media screen and (max-width: 900px){
+  .main-grid{grid-template-columns: 1fr}
+}
+@media screen and (max-width: 400px){
+  .site-nav ul{flex-direction:column;gap:6px}
+}
