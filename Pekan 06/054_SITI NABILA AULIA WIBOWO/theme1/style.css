@@ -1,0 +1,165 @@
+/*
+Theme Name: CV Nabila Portfolio
+Author: Nabila
+Version: 1.0
+Description: Single Page Portfolio WordPress Theme
+*/
+
+/* RESET */
+body, h1, h2, h3, p, ul, li {
+    margin: 0; 
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #1e293b;
+}
+
+/* HEADER */
+.header {
+    background: #2563eb;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* NAVIGASI */
+.nav {
+    background: #1e3a8a; /* biru tua */
+    padding: 0.6rem 0; 
+}
+.nav-content ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* rata tengah */
+    gap: 1.2rem; /* jarak antar menu */
+    margin: 0;
+    padding: 0;
+}
+.nav-content ul li {
+    display: inline-block;
+}
+.nav-content ul li a {
+    display: inline-block;
+    padding: 0.5rem 1rem; /* lebar pas */
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background 0.3s;
+    font-size: 0.95rem;
+}
+.nav-content ul li a:hover,
+.nav-content ul li a:focus,
+.nav-content ul li a.active {
+    background: #2563eb; /* biru terang saat hover */
+}
+
+/* CONTAINER */
+.container {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+.page {
+    margin-bottom: 3rem;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.card-title {
+    color: #1e40af;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* PROFILE */
+.profile-section {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+.profile-placeholder {
+    width: 100px;
+    height: 100px;
+    background: #2563eb;
+    color: white;
+    border-radius: 50%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+.info-item {
+    background: #f1f5f9;
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+.info-label {
+    font-weight: bold;
+    color: #334155;
+}
+
+/* SKILL BARS */
+.skill {
+    margin-bottom: 1rem;
+}
+.skill-bar {
+    background: #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.skill-progress {
+    background: #2563eb;
+    color: white;
+    padding: 0.3rem;
+    text-align: right;
+    border-radius: 8px;
+    transition: width 1.5s ease;
+}
+
+/* FORM KONTAK */
+form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+form button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+form button:hover {
+    background: #1e40af;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #1e3a8a;
+    color: white;
+}
