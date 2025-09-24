@@ -1,0 +1,32 @@
+/*
+Theme Name: SAFIRANWTHEMES2
+Theme URI: https://example.com/mytheme
+Author: SAFIRA
+Author URI: https://example.com
+Description: Tema WordPress custom sederhana buatan sendiri.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, simple, custom
+Text Domain: SAFIRAtheme
+*/
+
+/* Style dasar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    color: #333;
+}
+
+header, footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
