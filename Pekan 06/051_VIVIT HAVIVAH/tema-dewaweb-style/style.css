@@ -1,0 +1,82 @@
+/*
+Theme Name: Tema Dewaweb-Style
+Theme URI: https://example.com
+Author: Nama Kamu
+Description: Tema sederhana berdasarkan tutorial "Belajar membuat template WordPress sendiri dari nol" — responsive, modern, soft colors.
+Version: 1.0
+Text Domain: tema-dewaweb-style
+*/
+
+:root{
+  --bg: #fbfcfd;
+  --card: #ffffff;
+  --muted: #8b90a0;
+  --accent: #5aa7a3;
+  --text: #1f2733;
+  --radius: 12px;
+  --container: 1100px;
+  --gap: 1.25rem;
+  --shadow: 0 8px 24px rgba(31,39,51,0.06);
+  --transition: 180ms ease;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: linear-gradient(180deg,#fbfcfd 0%, #f7f9fa 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  padding:2rem 1rem;
+}
+
+/* Site container */
+.site { max-width:var(--container); margin:0 auto; }
+
+/* Header */
+.site-header { display:flex; align-items:center; justify-content:space-between; gap:var(--gap); margin-bottom:2rem; }
+.brand { display:flex; align-items:center; gap:.75rem; text-decoration:none; color:var(--text); }
+.logo { width:48px; height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-weight:700; background:linear-gradient(135deg,var(--accent),#bfe6e1); box-shadow:var(--shadow); }
+.site-title{margin:0;font-weight:700;font-size:1.125rem}
+.site-desc{font-size:.85rem;color:var(--muted)}
+
+/* Layout: two-column with sidebar */
+.content-grid{ display:grid; grid-template-columns:1fr 320px; gap:2rem; align-items:start; }
+@media (max-width:920px){ .content-grid{ grid-template-columns:1fr; } }
+
+/* Post cards grid */
+.posts-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:1.5rem; }
+.post-card{ background:var(--card); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transition:transform var(--transition), box-shadow var(--transition); display:flex; flex-direction:column; }
+.post-card:hover{ transform:translateY(-6px); box-shadow:0 16px 40px rgba(31,39,51,0.09); }
+
+.thumb-wrap img{ width:100%; height:180px; object-fit:cover; display:block; }
+.post-body{ padding:1.15rem; }
+.post-title{ margin:0 0 .35rem 0; font-size:1.08rem; line-height:1.25; }
+.post-title a{ color:var(--text); text-decoration:none; }
+.post-title a:hover{ color:var(--accent); }
+
+.post-meta{ color:var(--muted); font-size:.85rem; display:flex; gap:.5rem; align-items:center; margin-bottom:.6rem; }
+.excerpt{ color:#4b5563; font-size:.95rem; line-height:1.6; }
+
+/* Read more */
+.read-more{ display:inline-block; margin-top:.7rem; color:var(--accent); text-decoration:none; font-weight:600; }
+.read-more:hover{ text-decoration:underline; }
+
+/* Sidebar widgets */
+.sidebar .widget{ background:var(--card); padding:1rem; border-radius:10px; box-shadow:var(--shadow); margin-bottom:1rem; }
+.widget h3{ margin:0 0 .5rem 0; }
+
+/* Pagination */
+.pagination-wrap{ text-align:center; margin-top:1.5rem; }
+.page-numbers{ display:inline-block; padding:.45rem .7rem; margin:0 .25rem; border-radius:8px; background:#f3f4f6; text-decoration:none; color:#374151; }
+.page-numbers.current{ background:var(--accent); color:#fff; font-weight:700; }
+
+/* Footer */
+.site-footer{ text-align:center; color:var(--muted); padding:2rem 0; margin-top:2.5rem; }
+
+/* Responsive tweaks */
+@media (max-width:480px){
+  .thumb-wrap img{ height:150px; }
+  body{ padding:1rem; }
+}
