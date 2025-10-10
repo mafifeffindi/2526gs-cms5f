@@ -1,0 +1,212 @@
+/*
+
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: aesthetic-soft
+*/
+/*
+Theme Name: Tema 2
+Theme URI: http://localhost/tema2
+Author: Nama Kamu
+Author URI: http://localhost
+Description: Tema WordPress custom buatan sendiri
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: tema2
+*/
+
+
+:root{
+--bg: #fffdfa;
+--card: #ffffff;
+--muted: #8b8b8b; /* improved contrast */
+--primary: #ff6bda; /* soft purple */
+--accent: #e77ed0; /* mint */
+--shadow: 0 6px 20px rgba(46,48,62,0.06);
+--radius: 14px;
+--max-width: 1100px;
+--gap: 24px;
+--transition: 0.3s ease;
+}
+
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+margin:0;
+background: linear-gradient(135deg, #f0eafc, #f9f6ff), radial-gradient(circle at top, rgba(255, 107, 218, 0.1), transparent 50%);
+color:#222;
+line-height: 1.7;
+font-weight: 400;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+}
+
+
+a{color:var(--primary);text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+
+
+.site-wrapper{max-width:var(--max-width);margin:48px auto;padding:24px}
+.header{
+display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:32px
+}
+.site-brand{display:flex;align-items:center;gap:12px}
+.logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:700;transition: background 0.3s ease;}
+.logo:hover {
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  cursor: pointer;
+}
+.site-title{font-size:20px;font-weight:600;transition: color 0.3s ease;}
+.site-title a:hover {
+  color: var(--primary);
+}
+.site-desc{font-size:13px;color:var(--muted);font-style: italic;}
+
+
+.nav{
+display:flex;align-items:center;gap:18px;
+}
+.nav .menu-toggle{display:none;cursor:pointer;}
+
+
+.layout{display:grid;grid-template-columns:1fr 320px;gap:var(--gap);}
+
+
+.main{display:flex;flex-direction:column;gap:20px;}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;border: 1px solid transparent;transition: box-shadow var(--transition), border-color var(--transition);}
+.card:hover {
+  box-shadow: 0 10px 30px rgba(46,48,62,0.12);
+  border-color: var(--primary);
+}
+.animate-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.post .post-title{font-size:24px;margin:0;font-weight:700;text-shadow: 0 1px 2px rgba(0,0,0,0.1);transition: color var(--transition);}
+.post .post-title a:hover {
+  color: var(--primary);
+}
+.post .meta{font-size:13px;color:var(--muted);}
+.post .excerpt{color:#334155;font-size:16px;line-height:1.6;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;}
+
+
+.sidebar .widget{margin-bottom:18px;}
+
+
+.footer{margin-top:40px;padding:24px;text-align:center;color:var(--muted);}
+
+
+/* Responsive */
+@media(max-width:900px){
+.layout{grid-template-columns:1fr;}
+.nav .menu-toggle{display:inline-flex; background: var(--primary); border: none; padding: 8px 12px; border-radius: 8px; color: white; font-size: 18px; transition: background 0.3s ease; cursor: pointer;}
+.nav .menu-toggle:hover {
+  background: var(--accent);
+}
+.nav ul{display:none;}
+.nav .main-nav {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.nav .main-nav.open {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--card);
+  position: absolute;
+  top: 60px;
+  right: 24px;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.nav .main-nav.open a {
+  color: var(--primary);
+  font-weight: 600;
+}
+}
+
+/* Additional improvements */
+body {
+  line-height: 1.6;
+  font-size: 16px;
+  background: linear-gradient(135deg, #f0eafc, #f9f6ff);
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+h2.post-title a {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+}
+
+h2.post-title a:hover {
+  border-color: var(--primary);
+}
+
+.meta {
+  font-style: italic;
+  color: var(--muted);
+}
+
+.excerpt {
+  font-size: 15px;
+  color: #555;
+}
+
+.footer {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Read more button */
+.post p a {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.post p a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 218, 0.3);
+}
